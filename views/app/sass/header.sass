@@ -1,0 +1,230 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass"
+@import "../libs/font_awesome/css/font-awesome.sass"
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6	
+	overflow-x: hidden
+	color: #212121
+
+h1, h2, h3, h4, h5, h6	
+	font-weight: normal
+
+.hidden
+	display: none
+
+a:link, a:visited, a:hover, a:active, input
+	text-decoration: none
+	outline: none
+i
+	color: #212121
+	font-size: 30px
+#logo_wrapper 
+	display: block
+	padding: 0
+	height: 100px
+	margin-top: 15px
+	img
+		display: block
+		height: 65px
+		width: auto
+#nav_wrapper 
+	margin-top: 20px
+	ul
+		li
+			padding: 9px 5px 0
+			margin: 0 17px
+			height: 55px
+			vertical-align: middle					
+			&:hover
+				cursor: pointer	
+			&:first-child
+				margin-left: 70px		
+			h4
+				a
+					font-size: 19px
+					display: block				
+					font-family: "OpenSans", sans-serif
+					font-weight: 300
+					color: #323232
+					height: 21px
+					transition: all .23s ease
+					border-bottom: 1px solid transparent
+					&:hover
+						color: #656565
+						height: 21px
+						border-bottom: 1px solid #777
+						text-decoration: none
+
+#buyLV_wrapper
+	padding-top: 0
+	#buy_lv
+		font-size: 15px
+		padding: 7px 25px
+		font-weight: 300
+		font-family: "OpenSans", sans-serif
+		margin: 0 0 10px 0
+		color: #333
+		margin: 0 11px	
+		background-color: transparent
+		&:hover
+			background-color: #333	
+			color: #fff
+	a
+		text-align: center
+		font-size: 15px
+		padding: 4px 1px
+		border-radius: 3px
+		font-weight: 300
+		margin: 11px		
+		width: 80px
+		color: #333
+		border: 2px solid #333	
+		transition: all .23s ease
+		&:hover
+			background-color: #333
+			color: #fff		
+	#registaration	
+		width: 130px
+		background-color: transparent
+		margin-left: 12px
+		&:hover
+			background-color: #333
+
+	h5
+		display: inline-block
+		color: #212121
+		font-size: 17px
+		margin-left: 20px							
+
+.content
+	.court_photo
+		text-align: center
+		height: 400px
+		width: 100%
+		background-image: url("/views/app/img/ukraine.jpg")
+		background-position: top center
+		background-size: cover
+		position: absolute
+		left: 50%
+		margin-left: -50%
+		&:after
+			content: ""
+			width: 100%
+			height: 100%
+			position: absolute
+			z-index: 2
+			left: 0
+			top: 0
+			background-color: rgba(0,0,0,.4)
+		h1
+			position: relative
+			z-index: 3
+			font-size: 50px
+			margin-top: 150px
+			margin-bottom: 2px
+			color: #fff
+			font-family: "OpenSansLight", sans-serif
+		h2
+			color: #fff
+			position: relative
+			z-index: 3
+			margin-top: 0
+			font-size: 20px
+			font-family: "OpenSansLight", sans-serif
+	img
+		margin-top: 20px
+		width: 100%
+		height: 423px
+		z-index: 1
+	h2
+		font-family: "OpenSans", sans-serif
+	.wrap_1_section_1, .wrap_2_section_1
+		height: 485px
+		ul
+			padding: 0	
+		li
+			list-style-type: none
+	.wrap_2_section_1
+		border-top: 1px solid #777
+		ul
+			margin-top: 17px
+		img 
+			margin-top: 37px
+			max-height: 410px
+			width: auto
+			max-width: 100%
+	.wrap_1_section_1
+		margin-top: 420px
+		img 
+			margin-top: 37px
+			max-height: 445px
+			width: auto
+			max-width: 100%
+
+.footer 
+	width: 100%
+	position: relative
+	z-index: 2
+	.container
+		color: #212121
+		position: relative
+		z-index: 3
+		color: #fff
+		h1
+			line-height: 56px
+			font-size: 18px
+			margin: 0
+			font-family: "OpenSansLight", sans-serif
+			a
+				font-family: "OpenSansBold", sans-serif
+				color: #fff
+
+.footer:after
+	content: ""
+	background: #212121
+	width: 100%
+	height: 56px
+	position: absolute
+	bottom: 0
+	left: 0
+	z-index: 1
+.powered_by
+	position: relative
+	z-index: 3
+	color: #fff
+	text-align: center
+
+#partners
+	//margin-top: 20px
+	//background-color: #eee
+	.wrap_img
+		width: 100%
+		margin-top: 20px
+		background-color: #fff
+		text-align: center
+		img
+			width: 128px
+			height: 128px
+			max-width: 100%
+			max-height: 400px
+	h3
+		font-family: "OpenSans", sans-serif
+		text-align: center
+		margin: 0
+		padding: 20px 0 15px 0
+		font-size: 27px
+		color: #000
+		margin-bottom: 10px
+	.panel-info
+		border: 2px solid #eee
+		border-top: none
+		border-radius: 0
+		p
+			color: #444		
+			line-height: 1.65

@@ -1,0 +1,36 @@
+<div id="contacts">
+
+	<center><h2>Контакты</h2></center>
+	<div class="col-sm-6">
+		<div class="panel panel-info">
+			<div class="panel-body">
+			<h4>Наша почта: vglobal.in@gmail.com</h4>
+				<center><h3>Контакты наших партнеров "Правозащитная Група "Варта"</h3>
+				<h5>Электронный адрес: varta_pravo@ukr.net</h5>
+				<button class='btn btn-info' onclick="toggleCallback()">Связатся с нами</button>
+				<h5>Адрес офиса: г.Бровары, ул. Грушевского 9\1, 2 этаж
+				</h5></center>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-6"><iframe style="display: block; margin-left: auto;margin-right: auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2537.5739593785834!2d30.78244151573333!3d50.50488657948288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d962c2a473b1%3A0x697d6dbfd2ad3ae!2z0LLRg9C70LjRhtGPINCT0YDRg9GI0LXQstGB0YzQutC-0LPQviwgOS8xLCDQkdGA0L7QstCw0YDQuCwg0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LvQsNGB0YLRjCwgMDc0MDA!5e0!3m2!1suk!2sua!4v1486566436349" width="600" height="450" frameborder="0" allowfullscreen></iframe></div>
+				
+<script>
+	function toggleCallback(){
+		if(document.getElementById('callback').style.display=="none")
+		{
+		document.getElementById('callback').style.display="block";
+		}else{document.getElementById('callback').style.display="none";
+		}
+	}
+</script>
+				<div id="callback" class="col-xs-10" style="display:none; position: fixed;
+    top: 15%;
+    left: 12%;">
+    	<button onclick="toggleCallback()" style="float:right">X</button>
+    			<?php require('./views/home/form/index.php');?>
+				</div>
+<!-- 			</div>
+		</div>
+</div>
+</div> -->

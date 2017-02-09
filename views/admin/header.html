@@ -1,0 +1,38 @@
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+  </style>
+<div class="container" style="border-bottom:1px solid black">
+  <h3>Разделы</h3>
+  <ul class="list-inline">
+<li><a href='?controller=admin&action=users'>Пользователи</a></li>
+<li><a href='?controller=admin&action=coupons'>Скидки/накопительная система</a></li>
+<li><a href='?controller=admin&action=email_feed'>Рассылка</a></li>
+<li><a href='?controller=admin&action=tables'>Столы</a></li>
+<li><a href='?controller=admin&action=messages'>Сообщения</a></li>
+<li><a href='?controller=admin&action=settings'>Настройки</a></li>
+<li><a href='?controller=admin&action=spendings'>Расходы посетителей</a></li>
+</ul>
+<a class="btn btn-warning" href="?controller=admin&action=logout">Выйти</a>
+<a style="margin-left:10%" class="btn btn-danger" id="newMessage" href="?controller=admin&action=messages"></a>
+</div>
+
+<script>
+checkMessage()
+ for(var i=0; i<100;i++){
+ setInterval(checkMessage,300000);//every 5 minutes
+ }
+
+function checkMessage() {
+	console.log('Message check triggered at'+ new Date());
+ 
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("newMessage").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "./views/admin/checkMessage.php");
+        xmlhttp.send();
+    }
+</script>

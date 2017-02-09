@@ -1,0 +1,53 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass"
+//@import "../libs/animate/animate.sass"
+@import "../libs/font_awesome/css/font-awesome.sass"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body:focus
+	outline: none
+body::selection 
+	background: transparent
+
+	
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+body
+	::-webkit-scrollbar 
+		-webkit-appearance: none
+		width: 7px
+
+	::-webkit-scrollbar-thumb 
+		border-radius: 4px;
+		background-color: rgba(0,0,0,.5);
+		-webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)
+
+
+
+
+
+
+
+//ALWAYS END
+@import "media"
+		

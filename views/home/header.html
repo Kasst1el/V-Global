@@ -1,0 +1,37 @@
+  <style>
+  #logo_wrapper, #nav_wrapper, #buyLV_wrapper {
+    padding-top: 1%;
+  }
+  #buyLV_wrapper {
+    padding-top: 18px
+  }
+  </style>
+
+
+
+
+
+
+<div class="header container">
+  <div id='logo_wrapper' class="col-xs-2">
+    <!-- <h2>LOGO</h2> -->
+    <img src="views/app/img/logo.png" alt="Logo">
+  </div>
+  <div id="nav_wrapper" class='container col-xs-7' style="display: block;
+    margin-left: auto;
+    margin-right: auto">
+    <ul class="list-inline">
+      <li><h4><a href='?controller=home&action=index'>Главная</a></h4></li>
+      <li><h4><a href='?controller=home&action=catalog'>Каталог</a></h4></li>
+      <li><h4><a href='?controller=home&action=partners'>Наши партнеры</a></h4></li>
+      <li><h4><a href='?controller=home&action=contacts'>Контакты</a></h4></li>
+    </ul>
+  </div>
+  <div id="buyLV_wrapper" class='col-xs-3'>
+    <a href="#" id="buy_lv">Купить LV</a><h5>1$ = 1 LV</h5>
+    <div>
+      <a class="col-xs-6" href="?controller=home&action=login">Вход</a>
+      <a id="registaration" class="col-xs-6" href="?controller=home&action=register">Регистрация</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,266 @@
+@import "bourbon"
+@import "vars.sass"
+@import "fonts.sass"
+// @import "../libs/font_awesome/css/font-awesome.sass"
+
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	background-color: #3e3e3e
+	overflow-x: hidden
+	color: #212121
+
+h1, h2, h3, h4, h5, h6	
+	font-weight: normal
+
+.hidden
+	display: none
+
+a:link, a:visited, a:hover, a:active, input
+	text-decoration: none
+	outline: none
+
+
+#container_1
+	display: none
+	width: 100%
+	height: 100%
+	max-width: 1200px
+	max-height: 700px
+	margin: 100px auto
+	z-index: 9999
+	position: relative
+	transition: all .3s ease
+	
+#slideshow
+  width: 8%
+  height: 8%
+  margin: 100px auto 0
+  position: relative
+  overflow: hidden
+  background-color: rgba(255, 255, 255, 0.5)
+
+  &.fullscreen
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    margin: 0 auto
+    padding: 0
+    background-color: rgba(0, 0, 0, 0.7)
+    overflow: hidden
+    .wrap 
+    	display: flex
+    	justify-content: center
+    	align-items: center
+    	width: 100%
+    	height: 100%
+    	color: #fff	
+    	h6
+    		font-family: 'Playfair Display', sans-serif
+    		font-size: 17px
+    		bottom: 10px
+    		margin: 0
+    		margin-right: 10px
+    		position: absolute
+    		right: 0
+    		//background-color: rbga(0,9,0,.5)
+    		z-index: 11
+    		font-weight: 400
+    		font-style: italic
+    		text-align: right
+    	h5
+    		font-family: 'Playfair Display', sans-serif
+    		font-size: 20px
+    		bottom: 80px
+    		margin-right: 10px
+    		position: absolute
+    		right: 0
+    		//background-color: rbga(0,9,0,.5)
+    		z-index: 11
+    		font-weight: 400
+    		font-style: italic
+    		text-align: right
+    	h4
+    		font-family: 'Playfair Display', sans-serif
+    		font-size: 20px
+    		bottom: 80px
+    		margin-left: 10px
+    		position: absolute
+    		left: 0
+    		//background-color: rgba(0,0,0,0.5)
+    		z-index: 11
+    		font-weight: 400
+    		font-style: italic
+    	h3
+    		font-family: 'Playfair Display', sans-serif
+    		font-size: 17px
+    		position: absolute
+    		bottom: 10px
+    		left: 0
+    		//background-color: rgba(0,0,0,0.5)
+    		z-index: 9
+    		margin: 0 auto
+    		display: inline-block
+    		transition: all .4s ease
+    	img
+	    	height: 84%
+	    	max-height: auto
+	    	width: auto
+	    	max-width: 1800px
+	    	transition: all .85s ease
+	    	opacity: 1
+
+
+
+.img-wrapper
+	position: absolute
+	top: 3%
+	bottom: 5%
+	left: 0
+	right: 0
+	margin: auto
+	overflow: hidden
+	z-index: 8
+	background-size: cover
+	background-position: center center
+	width: auto
+	height: 100%
+	margin: 0 auto 
+	
+
+
+#slideshow .img-wrapper
+	z-index: 9
+	transform: translateX(1200px)
+	&.left
+		transform: translateX(1200px)
+	&.right
+		transform: translateX(-1200px)
+	&.active
+		z-index: 10
+		opacity: 0
+		transform: translateX(0)
+
+
+.thumbs-container
+	width: 100%
+	height: 80px
+	position: absolute
+	left: 0
+	z-index: 11
+	background: #222222
+	opacity: .9
+	&.top
+	 	top: 0
+	&.bottom
+		bottom: 0
+
+.prev, .next
+  width: 3%
+  min-width: 30px
+  height: 24px
+  padding: 28px 1%
+  color: #999999
+  margin-right: 5px
+  cursor: pointer
+
+.prev
+	float: left
+	width: 32px
+	overflow: hidden
+	padding: 0
+	height: 32px
+	margin: 24px 1%
+
+#slideshow.fullscreen .prev img
+	position: relative
+	left: -64px
+	&:hover
+		left: -96px
+
+#slideshow.fullscreen .next img
+	position: relative
+	left: -32px
+	&:hover
+		left: 0
+
+.next
+	float: right
+	width: 32px
+	overflow: hidden
+	padding: 0
+	height: 32px
+	margin: 24px 1%
+
+#slideshow.fullscreen .prev img, #slideshow.fullscreen .next img
+	width: auto
+	height: auto	
+	border-image-width: 0
+	&:hover
+		border: 0
+		border-image-width: 0
+
+.prev:hover, .next:hover
+  color: #555555
+
+ul.thumbs
+  position: absolute
+  top: 0
+  left: 5%
+  right: 5%
+  height: 80px
+  padding: 0
+  margin: 0 5%
+  overflow: hidden
+  white-space: nowrap
+  text-align: center
+
+.thumb
+	display: inline-block
+	width: 64px
+	height: 64px
+	margin: 6px
+	overflow: hidden
+	background-size: cover
+	background-position: center center
+	cursor: pointer
+	transition: all .3s ease
+	box-sizing: content-box
+	background-repeat: no-repeat
+	border: 2px solid transparent
+	&:first-of-type
+		margin-left: 0px
+	&.active
+		//transform: scale(0.8)
+		border: 2px solid #FFF
+		background-size: 105%
+		//width: 62px
+		//height: 62px
+		
+#slideshow.fullscreen div[id^="img"] 
+	height: 90%
+	top: 3%
+	bottom: 10%
+	width: auto
+
+#modal_close_slide_show
+	width: 32px
+	height: 32px
+	position: fixed
+	top: 20px
+	right: 20px
+	z-index: 10000
+	cursor: pointer
+	display: block
+	color: #fff
+	img
+		width: 32px
+		height: 32px
+		transition: all .2s ease
+		&:hover
+			opacity: .55
